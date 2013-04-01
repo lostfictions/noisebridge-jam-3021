@@ -33,6 +33,8 @@ public class Squishy : MonoBehaviour
 
 	void Start()
 	{
+		horizontalSpeed *= Random.Range(0.97f, 1.12f);
+
 		camtransform = Camera.main.transform;
 
 		bloopTimer = Random.Range(3.4f, 5.6f);
