@@ -10,6 +10,13 @@ public class Game : MonoBehaviour {
 	
 	private Color[] _colors;
 	
+
+	public float colorChangeTimer = 4.7f;
+	public float colorLerpSpeed = 0.7f;
+
+	Color currentColor;
+	float activeColorChangeTimer;
+
 	void Awake() {
 		if (instance == null) instance = this;
 		
@@ -24,11 +31,40 @@ public class Game : MonoBehaviour {
 	}
 	
 	void Start() {
-		
-		Color c = getRandomColor();
-		transform.FindChild("camera").camera.backgroundColor = c;
-		transform.FindChild("light").light.color = c;
-		RenderSettings.fogColor = c;
+
+		activeColorChangeTimer = colorChangeTimer;
+
+		currentColor = getRandomColor();
+
+		transform.FindChild("camera").camera.backgroundColor = currentColor;
+		transform.FindChild("light").light.color = currentColor;
+		RenderSettings.fogColor = currentColor;
+	}
+
+	void Update()
+	{
+		activeColorChangeTimer -= Time.deltaTime;
+		if(activeColorChangeTimer < 0)
+		{
+			activeColorChangeTimer = colorChangeTimer;
+
+			Camera cam = transform.FindChild("camera").camera;
+			Light lite = transform.FindChild("light").light;
+
+			Color nextColor = getRandomColor();
+
+			Waiters.Interpolate(colorLerpSpeed,
+								t => {
+										Color c = Color.Lerp(currentColor, nextColor, t);
+
+										cam.backgroundColor = c;
+										lite.color = c;
+										RenderSettings.fogColor = c;
+									 },
+								gameObject)
+				   .Then( () => currentColor = nextColor);
+		}
+
 	}
 	
 	
