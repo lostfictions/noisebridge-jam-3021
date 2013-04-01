@@ -5,11 +5,6 @@ public class RandomColor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		renderer.material.color = Game.instance.getRandomColor();
 	}
 }
