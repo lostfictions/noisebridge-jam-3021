@@ -13,9 +13,13 @@ public class Game : MonoBehaviour {
 
 	public float colorChangeTimer = 4.7f;
 	public float colorLerpSpeed = 0.7f;
+	public float speedOnPress = 10;
+	public float speedLerp = 0.001f;
 
 	Color currentColor;
 	float activeColorChangeTimer;
+	
+	public float speedratio  = 1;
 
 	void Awake() {
 		if (instance == null) instance = this;
@@ -64,6 +68,8 @@ public class Game : MonoBehaviour {
 								gameObject)
 				   .Then( () => currentColor = nextColor);
 		}
+		
+		speedratio = Mathf.Lerp(speedratio, Input.anyKey ? speedOnPress : 1, speedLerp);
 
 	}
 	

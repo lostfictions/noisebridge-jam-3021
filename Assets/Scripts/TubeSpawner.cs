@@ -4,7 +4,10 @@ using System.Collections;
 public class TubeSpawner : MonoBehaviour {
 	public GameObject spawnee;
 	
-	public bool useAudio = false;
+	public AudioClip[] audios;
+	public float audioMinDistance = 4;
+	public float audioMaxDistance = 20;
+	public float dopplerLevel = 6;
 	
 	public int spawnAmount = 12; // make it multiple of 3 for best coloring
 	public float separation = 10;
@@ -33,6 +36,15 @@ public class TubeSpawner : MonoBehaviour {
 		for (int i = 0; i < _spawns.Length; i++) {
 			_spawns[i] = Spawn(i + initialOffset * (speed > 0 ? 1 : -1));
 			SetTubeProperties(_spawns[i]);
+			if (audios.Length > 0) {
+				AudioSource ass = _spawns[i].gameObject.AddComponent<AudioSource>();
+				ass.clip = audios[(int)Mathf.Repeat(i,audios.Length)];
+				ass.minDistance = audioMinDistance;
+				ass.maxDistance = audioMaxDistance;
+				ass.dopplerLevel = dopplerLevel;
+				ass.loop = true;
+				ass.Play();
+			}
 		}
 		
 	}
@@ -51,7 +63,7 @@ public class TubeSpawner : MonoBehaviour {
 	void Update ()
 	{
 		for (int i = 0; i < _spawns.Length; i++) {
-			_spawns[i].Translate(0,0,-Time.deltaTime * speed,Space.World);
+			_spawns[i].Translate(0,0,-Time.deltaTime * speed * Game.instance.speedratio,Space.World);
 			if (speed > 0 && _spawns[i].position.z <= cutoffPosition) {
 				_spawns[i].Translate(0,0,separation * _spawns.Length,Space.World);
 				SetTubeProperties(_spawns[i]);

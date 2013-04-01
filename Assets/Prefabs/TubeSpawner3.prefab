@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: TubeSpawner
+  m_Name: TubeSpawner3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,11 +38,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2e105d4217dc54a89ccedc5da31adb, type: 3}
   m_Name: 
   spawnee: {fileID: 100000, guid: 786d8f7f1fa340d4eabaf76494ee7bf0, type: 2}
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 50d5ef8c0980c184ebefa8111115e64b, type: 3}
+  - {fileID: 8300000, guid: 83a51d05b473f204b90887047329a46a, type: 3}
+  - {fileID: 8300000, guid: 9705bbe16601b0541b53238b1c821e3d, type: 3}
   spawnAmount: 3
   separation: 23
-  speed: .600000024
-  radialscale: 1
+  speed: 1.39999998
+  radialscale: 1.5
   initialOffset: 2
   minRotSpeed: 2
   maxRotSpeed: 10

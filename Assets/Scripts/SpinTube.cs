@@ -12,7 +12,7 @@ public class SpinTube : MonoBehaviour
 	void Update()
 	{
 		Vector3 lea = transform.localEulerAngles;
-		lea.z += spinSpeed * Time.deltaTime;
+		lea.z += spinSpeed * Time.deltaTime * Game.instance.speedratio;
 		transform.localEulerAngles = lea;
 	}
 }

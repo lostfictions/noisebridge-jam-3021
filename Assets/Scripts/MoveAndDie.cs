@@ -12,7 +12,7 @@ public class MoveAndDie : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate(0,0,-Time.deltaTime * speed,Space.World);
+		transform.Translate(0,0,-Time.deltaTime * speed * Game.instance.speedratio,Space.World);
 		if (transform.position.z < -5) {
 			Destroy(gameObject);
 		}

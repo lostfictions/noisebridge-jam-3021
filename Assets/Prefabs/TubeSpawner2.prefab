@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: TubeSpawner
+  m_Name: TubeSpawner2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,8 +41,8 @@ MonoBehaviour:
   audios: []
   spawnAmount: 3
   separation: 23
-  speed: .600000024
-  radialscale: 1
+  speed: -.400000006
+  radialscale: .699999988
   initialOffset: 2
   minRotSpeed: 2
   maxRotSpeed: 10
