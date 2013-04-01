@@ -9,11 +9,6 @@ using Random = UnityEngine.Random;
 public class RollBall : MonoBehaviour
 {
 	public AnimationCurve accelerationCurve;
-
-	void Start()
-	{
-		
-	}
 	
 	void FixedUpdate()
 	{
