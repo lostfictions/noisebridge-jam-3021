@@ -47,6 +47,7 @@ GameObject:
   - 92: {fileID: 9200000}
   - 124: {fileID: 12400000}
   - 81: {fileID: 8100000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: camera
   m_TagString: MainCamera
@@ -91,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.34037209, z: 0}
+  m_LocalPosition: {x: 0, y: -1.83000004, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -212,8 +213,8 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
+    m_Type: 1
+    m_Resolution: 3
     m_Strength: 1
     m_Bias: .0189999994
     m_Softness: 4.44999981
@@ -245,19 +246,37 @@ MonoBehaviour:
   textures:
   - {fileID: 2800000, guid: 29193dd8ee347204eb8df06f82d93d9f, type: 3}
   - {fileID: 2800000, guid: 7759df01ef667f64aaf607e3b8356f42, type: 3}
-  - {fileID: 2800000, guid: d390d1a0e2805af4c92a6f00fedbcad0, type: 3}
+  - {fileID: 2800000, guid: 6f726addb338e45489731bbf3aefd0ba, type: 3}
   - {fileID: 2800000, guid: 872b3b0c23e788e418546de9e8350ffc, type: 3}
   - {fileID: 2800000, guid: c406f77da45930f47b026149a13c74ec, type: 3}
-  - {fileID: 2800000, guid: 6f726addb338e45489731bbf3aefd0ba, type: 3}
+  - {fileID: 2800000, guid: d390d1a0e2805af4c92a6f00fedbcad0, type: 3}
   - {fileID: 2800000, guid: 119c8437155c0164899b38a7693aa4f3, type: 3}
   - {fileID: 2800000, guid: 7415b1a5bf223dc4390aa276d7e1261b, type: 3}
-  - {fileID: 2800000, guid: fd80a1eda16069c4c83c813a396ff075, type: 3}
   - {fileID: 2800000, guid: b5284441a0df4d949abfd8f0368deafe, type: 3}
   - {fileID: 2800000, guid: d8af88e80ed6b874494b894b3bff01e7, type: 3}
+  - {fileID: 2800000, guid: fd80a1eda16069c4c83c813a396ff075, type: 3}
   - {fileID: 2800000, guid: a2cb4ba946e61444da5466cd644fcd36, type: 3}
+  - {fileID: 2800000, guid: 1050c59f5f501df42865c9b4cafa4e8d, type: 3}
+  - {fileID: 2800000, guid: 192dc6449efee364b9ff87fff616660d, type: 3}
+  - {fileID: 2800000, guid: 1e2df070fe364f24c9fe9e0c2d834a01, type: 3}
+  - {fileID: 2800000, guid: 266e5fdad5ff25d4e8c37cae277f37f6, type: 3}
+  - {fileID: 2800000, guid: 367c2f7a6b5f9944995aa7ebea68bfe2, type: 3}
+  - {fileID: 2800000, guid: 4bdf798c6677d9a499173ed3c7571d4b, type: 3}
+  - {fileID: 2800000, guid: 62959e8f126c5334f99f0c387a99e331, type: 3}
+  - {fileID: 2800000, guid: 85cfbe002ae506c448d9b652e10fe58c, type: 3}
+  - {fileID: 2800000, guid: 8b8c2616d4c8eb14baa477a39db60bc5, type: 3}
+  - {fileID: 2800000, guid: 05155267c851ac9408a52857f50f869f, type: 3}
+  - {fileID: 2800000, guid: 06c0017efdcb88c4892a615fd2848f13, type: 3}
+  - {fileID: 2800000, guid: 0e4b8aad30434ba4d9a516494b519c07, type: 3}
+  - {fileID: 2800000, guid: 2a1faedc9c6df7748afb0291e2fc5e42, type: 3}
+  - {fileID: 2800000, guid: 9b993a4c04681be448aa4f3afd8ab711, type: 3}
+  - {fileID: 2800000, guid: 9c93eb2d524220145a87c88481513ee5, type: 3}
+  - {fileID: 2800000, guid: e8dd74c8a30a60142885a4cc7220f135, type: 3}
+  - {fileID: 2800000, guid: f44c5e170904c404fbe12e02bae69044, type: 3}
+  - {fileID: 2800000, guid: 7161bea1323ed824ca8495fa21a1d060, type: 3}
   palette: {fileID: 2800000, guid: 39f2095fc843c464fbaad188cb8acf47, type: 3}
-  colorChangeTimer: 1.60000002
-  colorLerpSpeed: .779999971
+  colorChangeTimer: 4.69999981
+  colorLerpSpeed: 3.5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +287,134 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c4c2b8eebf4abb48830681484cca183, type: 3}
   m_Name: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b39678ff6aa4fec8d135d231ba9cde, type: 3}
+  m_Name: 
+  redChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: -.0270270277
+      value: -.0624999925
+      inSlope: .621062517
+      outSlope: .621062517
+      tangentMode: 0
+    - time: 1.01151609
+      value: 1.0796876
+      inSlope: 1.11882591
+      outSlope: 1.11882591
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  greenChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: -.0506756753
+      value: .0374999978
+      inSlope: .815254211
+      outSlope: .815254211
+      tangentMode: 0
+    - time: 1.01182437
+      value: 1.08749998
+      inSlope: 1.62191749
+      outSlope: 1.62191749
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  blueChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: -.0354729742
+      value: -.00624999963
+      inSlope: .711538374
+      outSlope: .711538374
+      tangentMode: 0
+    - time: 1.00506759
+      value: 1.01250005
+      inSlope: 1.23333478
+      outSlope: 1.23333478
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  useDepthCorrection: 0
+  zCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  depthRedChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  depthGreenChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  depthBlueChannel:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  saturation: 1
+  selectiveCc: 0
+  selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
+  selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
+  mode: 0
+  updateTextures: 1
+  colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
+    type: 3}
+  simpleColorCorrectionCurvesShader: {fileID: 4800000, guid: 438ddd58d82c84d9eb1fdc56111702e1,
+    type: 3}
+  colorCorrectionSelectiveShader: {fileID: 4800000, guid: e515e0f94cefc4c0db54b45cba621544,
+    type: 3}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
