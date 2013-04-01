@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Squishy : MonoBehaviour
 {
-	public float horizontalSpeed = 1f;
+	public float horizontalSpeed = 0f;
 
 	public float xamp = 0.03f;
 	public float xper = 0.4f;
