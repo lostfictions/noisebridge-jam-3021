@@ -8,12 +8,28 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: SquishyThing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: SquishyThing
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,17 +41,29 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.42000008, y: .207341671, z: 7.14389896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400002}
+  m_Father: {fileID: 0}
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: -.499998957, y: -.49999997, z: .50000006, w: .500001073}
-  m_LocalPosition: {x: 1.87647653, y: 1.78302753, z: 5.80967283}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.1784997, y: 3.17849994, z: 3.17850018}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 400000}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -53,14 +81,14 @@ MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 4300000, guid: 7c0a2ee7e792544469b0b451330fb20b, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8731d5b494b30244fa1a3a38fbe9509f, type: 3}
@@ -70,11 +98,41 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c4c2b8eebf4abb48830681484cca183, type: 3}
   m_Name: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f99ba441a61764b8a5104d6f296fcb, type: 3}
+  m_Name: 
+  horizontalSpeed: .469999999
+  cameraApproachSpeed: .5
+  xamp: .0299999993
+  xper: .400000006
+  xoffset: 0
+  yamp: .00960000046
+  yper: .5
+  yoffset: 0
+  angleamp: 6
+  angleper: 1.33399999
+  angleoffset: 0
+  squishySounds:
+  - {fileID: 8300000, guid: 5feed5e43e7fe97428987b5bf428c8b5, type: 3}
+  - {fileID: 8300000, guid: 1749b8d99631c4f43b06df37dd7c2d41, type: 3}
+  - {fileID: 8300000, guid: 449d227860d93d040a2da2dffc455ad1, type: 3}
+  - {fileID: 8300000, guid: 796d4c32db37bf04595c8a52f0527227, type: 3}
+  - {fileID: 8300000, guid: 907db3ef94c4a59408ca0fa86cfe1324, type: 3}
+  - {fileID: 8300000, guid: 9b96b64cfdc54c64ea7a372e7fbd391e, type: 3}
+  - {fileID: 8300000, guid: d11fa639fffb72f47a385f7ffaf13ac3, type: 3}
+  - {fileID: 8300000, guid: e5a871838ab828f488ab6c0509232b52, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
